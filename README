@@ -1,0 +1,39 @@
+	
+	Copyright © 2011 Screets. All rights reserved.
+	
+	"In the dark and the light, always help me."
+	
+	
+	
+	(First version of Kiddiework)
+	
+	
+	System Requirements
+	------------------------------------------
+		*	PHP 5.3 or newer (because of a couple of new functions)
+		*	MySQL 5.1 or newer
+		* 	PHP MySQLi extension
+	
+	Limitations
+	------------------------------------------
+	v0.4.x
+		* Each object can store 1 million different FILE IDS in /srv directory
+		  (256 directory and just 4000 files under per directory)
+		  
+			> For example each product object in ONE STORE can have 1 million file id 
+			  (that means product object in another store can have 1 million file ids as well, 
+			   and also another object, category can have 1 million file under per store directory.)
+			  
+			> An ID has different names while using in files (for example image files):
+				c64b0d3cae2f874df24d21d00e49cdee_thumb.jpg   // Thumbnail version of image file
+				c64b0d3cae2f874df24d21d00e49cdee_large.jpg   // Large version
+				c64b0d3cae2f874df24d21d00e49cdee_orginal.jpg // Original version
+				
+			> Note that, three version of ID above stored in DB as only one ID. 
+			  That means you can store 1 million IDs like that too.
+				
+		* Max. store: 		65.535
+		* Max. language: 	255 (en_EN, tr_TR, ba_BA, ru_RU, etc.)
+		* Max. user: 		16,777,215
+		* Max. product:		16,777,215
+		
